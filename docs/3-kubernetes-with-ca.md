@@ -308,7 +308,8 @@ $ vimdiff kubernetes-simple/all-node/kube-calico.service kubernetes-with-ca/all-
 /etc/kubernetes/ca/ca.pem  
 /etc/kubernetes/ca/calico/calico.pem  
 /etc/kubernetes/ca/calico/calico-key.pem  
-由于calico服务是所有节点都需要启动的，大家需要把这几个文件拷贝到每台服务器上
+由于calico服务是所有节点都需要启动的，大家需要把这几个文件拷贝到每台服务器上(这里直接拷贝整个文件夹)
+scp -r /etc/kubernetes/ca/ root@ip:/etc/kubernetes/ca/
 
 **更新calico服务**
 ```bash
