@@ -298,7 +298,7 @@ $ ls
 calico.csr  calico-csr.json  calico-key.pem  calico.pem
 ```
 
-#### 9.2 改造calico服务
+#### 9.2 改造calico服务（所有节点）
 **查看diff**
 ```bash
 $ cd ~/kubernetes-starter
