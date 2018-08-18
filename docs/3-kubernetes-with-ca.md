@@ -394,7 +394,7 @@ $ kubectl get csr|grep 'Pending' | awk '{print $1}'| xargs kubectl certificate a
 $ journalctl -f -u kubelet
 ```
 
-## 11. 改造kube-proxy
+## 11. 改造kube-proxy（工作节点）
 #### 11.1 准备证书
 ```bash
 #proxy证书放在这
@@ -464,7 +464,7 @@ $ service kube-proxy start
 $ journalctl -f -u kube-proxy
 ```
 
-## 12. 改造kube-dns
+## 12. 改造kube-dns（工作节点）
 kube-dns有些特别，因为它本身是运行在kubernetes集群中，以kubernetes应用的形式运行。所以它的认证授权方式跟之前的组件都不一样。它需要用到service account认证和RBAC授权。  
 **service account认证：**  
 每个service account都会自动生成自己的secret，用于包含一个ca，token和secret，用于跟api-server认证  
