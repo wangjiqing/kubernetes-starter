@@ -41,7 +41,7 @@ AdmissionControl - 准入控制本质上为一段准入代码，在对kubernetes
 - NamespaceExists：它会观察所有的请求，如果请求尝试创建一个不存在的namespace，则这个请求被拒绝。
 
 ## 3. 环境准备
-#### 3.1 停止原有kubernetes相关服务
+#### 3.1 停止原有kubernetes相关服务(主节点操作即可)
 开始之前我们要先把基础版本的集群停掉，包括service，deployments，pods以及运行的所有kubernetes组件
 ```bash
 #删除services
