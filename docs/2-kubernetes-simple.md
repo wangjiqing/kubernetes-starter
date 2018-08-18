@@ -197,7 +197,7 @@ kubectl config use-context kubernetes
 ```
 > 通过上面的设置最终目的是生成了一个配置文件：~/.kube/config，当然你也可以手写或复制一个文件放在那，就不需要上面的命令了。
 
-## 7. 配置kubelet（工作节点）
+## 7. 配置kubelet（工作节点,一般指不包含主节点）
 #### 7.1 简介
 每个工作节点上都运行一个kubelet服务进程，默认监听10250端口，接收并执行master发来的指令，管理Pod及Pod中的容器。每个kubelet进程会在API Server上注册节点自身信息，定期向master节点汇报节点的资源使用情况，并通过cAdvisor监控节点和容器的资源。
 #### 7.2 部署
