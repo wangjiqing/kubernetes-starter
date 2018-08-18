@@ -362,7 +362,7 @@ $ kubectl config use-context default --kubeconfig=bootstrap.kubeconfig
 #将刚生成的文件移动到合适的位置
 $ mv bootstrap.kubeconfig /etc/kubernetes/
 ```
-#### 10.3 准备cni配置
+#### 10.3 准备cni配置（工作节点）
 **查看diff**
 ```bash
 $ cd ~/kubernetes-starter
